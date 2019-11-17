@@ -1,3 +1,3 @@
 # webglearth
 
-[Demo](http://exp.firya.ru/webglearth/)
+[Demo](https://webglearth.maksimlebedev.ru)
