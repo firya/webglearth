@@ -1,0 +1,289 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic); /* roboto */
+:root {
+	--width: 1200px;
+}
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+html, 
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.4;
+	font-size: 16px;
+	//width: var(--width);
+	min-width: 320px;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	margin-bottom: 0.8em;
+}
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 17px; }
+ul, 
+ol {
+	margin-left: 1.5em;
+}
+li {
+	margin-bottom: 0.5em;
+}
+ul ul, 
+ol ol {
+	margin-bottom: 0;
+}
+p {
+	margin-bottom: 1em;
+}
+a:link {
+	color: #4A90E2;
+	text-decoration: underline;
+}
+a:visited {
+	color: #B000EE;
+	text-decoration: underline;
+}
+a:hover {
+	color: #E26F5D;
+	text-decoration: none;
+}
+a:active {
+	color: #3C78BF;
+	text-decoration: none;
+}
+a.c-dahsed {
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+table {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-collapse: collapse;
+	border: none;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+table th, 
+table td {
+	font-weight: normal;
+	text-align: left;
+	padding: 0.5em 1em;
+	text-align: left;
+	border: 1px solid #ccc;
+	vertical-align: top;
+}
+table th {
+	font-weight: bold;
+}
+a img {
+	vertical-align: top;
+}
+img {
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+}
+pre {
+	margin-bottom: 1em;
+}
+hr {
+	margin-bottom: 1em;
+	height: 1px;
+	min-height: 1px;
+	outline: none;
+	border: none;
+	background-color: #ccc;
+}
+dl {
+	margin-left: 1em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	font-style: italic;
+	margin-bottom: 20px;
+}
+abbr {
+	cursor: help;
+}
+blockquote {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+	margin: 0 auto 20px;
+	font-style: italic;
+	font-size: 1.1em;
+	padding: 20px 0 20px 100px;
+
+	&:before {
+	    position: absolute;
+	    top: -20px;
+	    left: 20px;
+	    font-family: Times new roman;
+	    display: block;
+	    font-size: 5em;
+	    font-weight: bold;
+	    color: #ccc;
+	    width: 50px;
+	    height: 50px;
+	    content: '\201d';
+	}
+}
+.input, 
+.select, 
+.textarea {
+	max-width: 100%;
+	height: 40px;
+	padding: 12px 16px;
+	line-height: 1;
+	font-size: 16px;
+	font-weight: normal;
+	text-align: left;
+	color: #444;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	display: inline-block;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	appearance: none;
+	transition: all 200ms ease-in-out;
+}
+.select {
+	cursor: pointer;
+	padding-right: 22px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAFCAYAAACaTbYsAAAAAXNSR0IArs4c6QAAAERJREFUGBmNjsEJADAIA5txnLJ2St3Gkv4sKAYEo14QZqYA9moUEUdE9D8BB11ABZJ7cBXQgWSS+IG7B4t9Wk4MoSl4AecxKyYkCVwLAAAAAElFTkSuQmCC);
+	background-position: right 17px;
+}
+.textarea {
+	width: 100%;
+	vertical-align: top;
+	line-height: 1.4;
+}
+.textarea, 
+.select[multiple] {
+	height: 120px;
+	min-height: 120px;
+}
+input[type="checkbox"], 
+input[type="radio"] {
+	margin-right: 5px;
+}
+::-webkit-input-placeholder {
+	color: #aaa;
+	transition: color 200ms ease-in-out;
+}
+::-moz-placeholder {
+	color: #aaa;
+	transition: color 200ms ease-in-out;
+}
+:-moz-placeholder {
+	color: #aaa;
+	transition: color 200ms ease-in-out;
+}
+:-ms-input-placeholder {
+	color: #aaa;
+	transition: color 200ms ease-in-out;
+}
+:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+:focus::-moz-placeholder {
+	color: transparent;
+}
+:focus:-moz-placeholder {
+	color: transparent;
+}
+:focus:-ms-input-placeholder {
+	color: transparent;
+}
+a.btn {
+	color: #fff;
+	text-decoration: none;
+}
+.btn {
+	max-width: 100%;
+	height: 40px;
+	padding: 12px 16px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1;
+	color: #fff;
+	border: 1px solid #2685DC;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 3px;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #3194EE;
+	transition: all 200ms ease-in-out;
+
+	&:hover {
+		background-color: #2685DC;
+	}
+
+	&:active {
+		border-color: #156EBF;
+		background-color: #156EBF;
+	}
+}
+.loading {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.1, rgba(0, 0, 0, 0.1)), color-stop(0.1, rgba(255, 255, 255, 0.1)), color-stop(0.5, rgba(255, 255, 255, 0.1)), color-stop(0.5, rgba(0, 0, 0, 0.1)), color-stop(0.75, rgba(0, 0, 0, 0.1)), color-stop(0.75, rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))) !important;
+	background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)) !important;
+	background-image: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)) !important;
+	background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)) !important;
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)) !important;
+	background-size: 40px 40px !important;
+	animation: loading 2s linear infinite;
+	-webkit-animation: loading 2s linear infinite;
+	-moz-animation: loading 2s linear infinite;
+	-o-animation: loading 2s linear infinite;
+	-ms-animation: loading 2s linear infinite;
+}
+@-webkit-keyframes loading {
+	0% {
+		background-position: 0% 0;
+	}
+	100% {
+		background-position: 40px 0;
+	}
+}
+@-moz-keyframes loading {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
+}
+@-o-keyframes loading {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
+}
+@keyframes loading {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 40px 0;
+	}
+}

@@ -1,0 +1,72 @@
+body {
+	background-color: #000;
+}
+section {
+	height: 100%;
+}
+.webglearth {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	canvas {
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+.webglearth__loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+}
+.loader {
+	width: 240px;
+	text-align: center;
+	opacity: 1;
+
+	&.loader--loaded {
+		animation: fadeOut .5s forwards;
+	}
+}
+@keyframes fadeOut {
+  0%	{ opacity: 1; }
+  99%	{ opacity: 0; }
+  100%	{ opacity: 0; visibility: hidden; display: none; }
+}
+.loader__text {
+	color: #fff;
+	padding-bottom: 10px;
+}
+.loader__load {
+	background-color: #fff;
+	width: 0%;
+	height: 12px;
+	border-radius: 10px;
+	transition: all .5s;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		border-radius: 10px;
+		height: 10px;
+		left: 0;
+		right: 0;
+		border: 1px solid #fff;
+	}
+}
+@media all and (max-width: 1000px) {
+
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) { 
+    /* стили для дисплеев Retina */
+}
