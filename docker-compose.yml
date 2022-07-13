@@ -1,9 +1,9 @@
-version: '3.7'
+version: "3.7"
 
 services:
-  webglearth_maksimlebedev:
+  webglearth:
     image: php:7.2-apache
-    container_name: webglearth_maksimlebedev
+    container_name: webglearth
     expose:
       - 80
       - 443
