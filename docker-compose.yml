@@ -1,21 +1,21 @@
-version: "3.7"
+version: '3'
 
 services:
-  webglearth:
-    image: php:7.2-apache
-    container_name: webglearth
-    expose:
-      - 80
-      - 443
+  website:
+    image: nginx:alpine
+    container_name: my-static-site
+    restart: unless-stopped
     volumes:
-      - ./public:/var/www/html
-    restart: always
-    environment:
-      - VIRTUAL_HOST=$VIRTUAL_HOST
-      - LETSENCRYPT_HOST=$LETSENCRYPT_HOST
-      - LETSENCRYPT_EMAIL=$LETSENCRYPT_EMAIL
+      - ./public:/usr/share/nginx/html
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.website.rule=Host(`webglearth.maksimlebedev.ru`)"
+      - "traefik.http.routers.website.tls=true"
+      - "traefik.http.routers.website.tls.certresolver=letsencrypt"
+      - "traefik.http.services.website.loadbalancer.server.port=80"
+    networks:
+      - traefik-public
 
 networks:
-  default:
-    external:
-      name: nginx-proxy
+  traefik-public:
+    external: true
