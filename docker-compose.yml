@@ -7,10 +7,10 @@ services:
       - ./public:/usr/share/nginx/html
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.website.rule=Host(`webglearth.maksimlebedev.ru`)"
-      - "traefik.http.routers.website.tls=true"
-      - "traefik.http.routers.website.tls.certresolver=letsencrypt"
-      - "traefik.http.services.website.loadbalancer.server.port=80"
+      - "traefik.http.routers.webglearth.rule=Host(`webglearth.maksimlebedev.ru`)"
+      - "traefik.http.routers.webglearth.tls=true"
+      - "traefik.http.routers.webglearth.tls.certresolver=letsencrypt"
+      - "traefik.http.services.webglearth.loadbalancer.server.port=80"
     networks:
       - traefik-public
 
