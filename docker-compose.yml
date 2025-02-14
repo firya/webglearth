@@ -7,7 +7,7 @@ services:
       - ./public:/usr/share/nginx/html
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.webglearth.rule=Host(`webglearth.maksimlebedev.ru`)"
+      - "traefik.http.routers.webglearth.rule=Host(`${DOMAIN}`)"
       - "traefik.http.routers.webglearth.tls=true"
       - "traefik.http.routers.webglearth.tls.certresolver=letsencrypt"
       - "traefik.http.services.webglearth.loadbalancer.server.port=80"
